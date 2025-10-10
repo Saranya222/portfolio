@@ -1,9 +1,9 @@
 {
+  "/_app": "pages/_app.js",
+  "/admin": "pages/admin.html",
   "/blog": "pages/blog.html",
   "/contact": "pages/contact.html",
   "/works": "pages/works.html",
-  "/_app": "pages/_app.js",
-  "/admin": "pages/admin.html",
   "/_error": "pages/_error.js",
   "/": "pages/index.html",
   "/works/[id]": "pages/works/[id].js",
