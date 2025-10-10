@@ -48,6 +48,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 };
 
 const useTheme = () => {
+  React.useState<Theme>(Theme.DARK);
   const context = React.useContext(ThemeContext);
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');

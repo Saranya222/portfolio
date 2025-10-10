@@ -24,7 +24,7 @@ var Theme;
 })(Theme || (Theme = {}));
 const ThemeContext = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createContext(undefined);
 const ThemeProvider = ({ children  })=>{
-    const [theme, setTheme] = react__WEBPACK_IMPORTED_MODULE_1___default().useState(Theme.LIGHT);
+    const [theme, setTheme] = react__WEBPACK_IMPORTED_MODULE_1___default().useState(Theme.DARK);
     const toggleTheme = ()=>{
         if (theme === Theme.LIGHT) {
             setTheme(Theme.DARK);
@@ -57,6 +57,7 @@ const ThemeProvider = ({ children  })=>{
     });
 };
 const useTheme = ()=>{
+    react__WEBPACK_IMPORTED_MODULE_1___default().useState(Theme.DARK);
     const context = react__WEBPACK_IMPORTED_MODULE_1___default().useContext(ThemeContext);
     if (context === undefined) {
         throw new Error("useTheme must be used within a ThemeProvider");
