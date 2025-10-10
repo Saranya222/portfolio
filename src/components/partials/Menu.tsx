@@ -121,7 +121,7 @@ const Menu = () => {
                         { 'text-primary-500': router.asPath == '/works' }
                       )}
                     >
-                      Works
+                      Works 
                     </a>
                   </Link>
                   <Link href="/contact">
