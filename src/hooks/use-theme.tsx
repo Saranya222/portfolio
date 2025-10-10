@@ -40,7 +40,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       }
     }
     return () => {
-      setTheme(Theme.LIGHT);
+      setTheme(Theme.DARK);
     };
   }, []);
 
