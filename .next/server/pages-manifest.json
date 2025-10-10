@@ -1,13 +1,13 @@
 {
-  "/_error": "pages/_error.js",
+  "/_app": "pages/_app.js",
   "/blog": "pages/blog.html",
+  "/admin": "pages/admin.html",
   "/contact": "pages/contact.html",
   "/works": "pages/works.html",
-  "/_app": "pages/_app.js",
-  "/admin": "pages/admin.html",
+  "/_error": "pages/_error.js",
   "/": "pages/index.html",
-  "/works/[id]": "pages/works/[id].js",
   "/blog/[id]": "pages/blog/[id].js",
+  "/works/[id]": "pages/works/[id].js",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }
