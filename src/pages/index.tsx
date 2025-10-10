@@ -1,5 +1,4 @@
 import AboutSection from '@/components/partials/AboutSection';
-import BlogSection from '@/components/partials/BlogSection';
 import ContactSection from '@/components/partials/ContactSection';
 import ExperienceSection from '@/components/partials/ExperienceSection';
 import HeroSection from '@/components/partials/HeroSection';
