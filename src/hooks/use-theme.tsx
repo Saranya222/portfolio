@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 
 export enum Theme {
   LIGHT = 'light',
@@ -12,12 +12,12 @@ type ThemeContextType = {
 
 type ThemeProviderProps = {
   children: React.ReactNode;
-}
+};
 
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = React.useState<Theme>(Theme.DARK);
+  const [theme, setTheme] = React.useState<Theme>(Theme.DARK); // default to DARK
 
   const toggleTheme = () => {
     if (theme === Theme.LIGHT) {
@@ -37,11 +37,14 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       setTheme(localTheme as Theme);
       if (localTheme === Theme.DARK) {
         document.documentElement.classList.add(Theme.DARK);
+      } else {
+        document.documentElement.classList.remove(Theme.DARK);
       }
-    }
-    return () => {
+    } else {
+      // Default to DARK mode on first load
+      document.documentElement.classList.add(Theme.DARK);
       setTheme(Theme.DARK);
-    };
+    }
   }, []);
 
   return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
@@ -49,7 +52,6 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
 const useTheme = () => {
   const context = React.useContext(ThemeContext);
-  React.useState<Theme>(Theme.DARK);
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }

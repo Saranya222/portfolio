@@ -130,16 +130,6 @@ const Menu = () => {
                       Works
                     </a>
                   </Link>
-                  <Link href="/blog">
-                    <a
-                      className={classNames(
-                        { 'text-primary-500': router.asPath == '/blog' },
-                        'group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600'
-                      )}
-                    >
-                      Blog
-                    </a>
-                  </Link>
                   <Link href="/contact">
                     <a
                       className={classNames(
