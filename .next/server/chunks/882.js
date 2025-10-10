@@ -24,7 +24,7 @@ var Theme;
 })(Theme || (Theme = {}));
 const ThemeContext = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().createContext(undefined);
 const ThemeProvider = ({ children  })=>{
-    const [theme, setTheme] = react__WEBPACK_IMPORTED_MODULE_1___default().useState(Theme.DARK);
+    const [theme, setTheme] = react__WEBPACK_IMPORTED_MODULE_1___default().useState(Theme.DARK); // default to DARK
     const toggleTheme = ()=>{
         if (theme === Theme.LIGHT) {
             setTheme(Theme.DARK);
@@ -42,11 +42,14 @@ const ThemeProvider = ({ children  })=>{
             setTheme(localTheme);
             if (localTheme === Theme.DARK) {
                 document.documentElement.classList.add(Theme.DARK);
+            } else {
+                document.documentElement.classList.remove(Theme.DARK);
             }
+        } else {
+            // Default to DARK mode on first load
+            document.documentElement.classList.add(Theme.DARK);
+            setTheme(Theme.DARK);
         }
-        return ()=>{
-            setTheme(Theme.LIGHT);
-        };
     }, []);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(ThemeContext.Provider, {
         value: {
@@ -57,7 +60,6 @@ const ThemeProvider = ({ children  })=>{
     });
 };
 const useTheme = ()=>{
-    react__WEBPACK_IMPORTED_MODULE_1___default().useState(Theme.DARK);
     const context = react__WEBPACK_IMPORTED_MODULE_1___default().useContext(ThemeContext);
     if (context === undefined) {
         throw new Error("useTheme must be used within a ThemeProvider");

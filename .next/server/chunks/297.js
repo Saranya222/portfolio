@@ -217,15 +217,6 @@ const Menu = ()=>{
                                                         })
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
-                                                        href: "/blog",
-                                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                                                            className: classnames__WEBPACK_IMPORTED_MODULE_3___default()({
-                                                                "text-primary-500": router.asPath == "/blog"
-                                                            }, "group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600"),
-                                                            children: "Blog"
-                                                        })
-                                                    }),
-                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
                                                         href: "/contact",
                                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
                                                             className: classnames__WEBPACK_IMPORTED_MODULE_3___default()({
@@ -287,7 +278,7 @@ _components_partials_Menu__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_depend
 
 
 const AppLayout = ({ children , title  })=>{
-    const appName = process.env.NEXT_PUBLIC_APP_NAME || "Pofology";
+    const appName = process.env.NEXT_PUBLIC_APP_NAME;
     const pageTitle = title ? `${title} - ${appName}` : appName;
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
