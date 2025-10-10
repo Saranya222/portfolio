@@ -220,6 +220,17 @@ const RecentComment = ()=>{
 
 /***/ }),
 
+/***/ 2549:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "x": () => (/* binding */ posts)
+/* harmony export */ });
+const posts = [];
+
+
+/***/ }),
+
 /***/ 7356:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -644,7 +655,7 @@ module.exports = import("@headlessui/react");;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [676,61,882,297,407,549], () => (__webpack_exec__(7356)));
+var __webpack_exports__ = __webpack_require__.X(0, [676,61,882,297,407], () => (__webpack_exec__(7356)));
 module.exports = __webpack_exports__;
 
 })();
