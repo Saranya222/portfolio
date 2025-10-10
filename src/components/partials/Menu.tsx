@@ -112,12 +112,6 @@ const Menu = () => {
               </Transition.Child>
               <div className="flex h-full flex-col overflow-y-auto">
                 <div className="border-b px-2 pb-4 dark:border-gray-700">
-                  <Link href="/">
-                    <a className="text-3xl  font-bold">
-                      <span>Pofology</span>
-                      <span className="text-primary-500">.</span>
-                    </a>
-                  </Link>
                 </div>
                 <nav className="mt-4 space-y-1 px-2">
                   <Link href="/works">
